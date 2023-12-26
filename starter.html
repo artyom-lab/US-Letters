@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter portrait;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #fff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+     <!-- your css goes here-->
+    <style>
+        .header, .header-space,
+        .footer, .footer-space {
+            height: 50px;
+             /* Maybe better not to use cm, maybe just 1 type of measurement */
+            left: 1cm;
+            right: 1cm;
+
+        }
+
+        tbody {
+            height: 300px
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+        }
+        
+        .margins{
+            margin-right: 1cm;
+            margin-left: 1cm;
+        }
+       
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="relative margins">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <div class="header-space">&nbsp;</div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <!-- Main body -->
+
+            <!-- use flex or grid now. table are only for quirks in paper header and footer -->
+            
+            Maecenas faucibus mollis interdum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
+                
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <div class="footer-space">&nbsp;</div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Header is fixed to repeat on all pages -->
+    <div class="header">
+        <!-- header content -->
+        HEADER Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    </div>
+
+    <!-- Footer is to repeat on all page -->
+    <div class="footer">
+        <!-- footer content -->
+        Footer Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+    </div>
+  </div>
+
+</body>
+</html>

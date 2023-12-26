@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter portrait;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #fff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Marcellus&display=swap");
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        margin: 0; }
+
+      .header, .footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding-left: 70px;
+        padding-right: 70px; }
+
+      .header {
+        top: 0;
+        text-align: center;
+        padding-top: 34px;
+        height: 40px; }
+
+      .footer {
+        bottom: 0;
+        color: #050F24;
+        font-size: 15px;
+        padding-bottom: 8px;
+        height: 42px; }
+
+      .header-space {
+        height: 100px; }
+
+      .footer-space {
+        height: 72px; }
+
+      .margins {
+        margin-right: 70px;
+        margin-left: 70px; }
+
+      table {
+        width: 100%; }
+
+      .d-flex {
+        display: flex; }
+
+      .fw-bold {
+        font-weight: bold; }
+
+      .mr-8 {
+        margin-right: 8px; }
+
+      .mr-12 {
+        margin-right: 12px; }
+
+      .mt-50 {
+        margin-top: 50px; }
+
+      .mb-38 {
+        margin-bottom: 38px; }
+
+      .ml-auto {
+        margin-left: auto; }
+
+      .main {
+        border: 1px solid #B4AD93; }
+
+      .bg-gray {
+        text-align: center;
+        background-color: #E5E4D5;
+        border-right: 1px solid #B4AD93;
+        width: 340px;
+        height: 100%; }
+
+      .bg-img {
+        background-image: url(img/prosecco.webp);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 105%;
+        max-height: calc(100vh - 172px);
+        position: absolute;
+        width: 340px;
+        top: -52px; }
+
+      .content {
+        padding: 50px 15px 30px 50px; }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px; }
+
+      .row-0 {
+        margin-left: 0;
+        margin-right: 0; }
+        .row-0 > [class*='col'] {
+          padding-left: 0;
+          padding-right: 0; }
+
+      .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .h1, h1, .h2, h2, .h3, h3, p {
+        margin-top: 0; }
+
+      .h1, h1 {
+        font-family: "Marcellus", sans-serif;
+        font-size: 36px;
+        color: #050F24;
+        margin-bottom: 8px; }
+
+      .h2, h2 {
+        font-size: 14px;
+        color: #BB934D;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 8px; }
+
+      .h3, h3 {
+        font-size: 12px;
+        color: #BB934D;
+        font-weight: bold;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 2px; }
+
+      p {
+        font-size: 12px;
+        margin-bottom: 16px; }
+
+      .qr-box {
+        position: absolute;
+        top: 12px;
+        right: 14px; }
+
+      .qr-comment {
+        color: #BB934D;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1;
+        margin-right: 6px;
+        text-align: right;
+        vertical-align: top; }
+       
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="relative margins">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <div class="header-space">&nbsp;</div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="row row-0"> 
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <div class="bg-img"></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="content">
+                    <img src="img/cavit.webp" alt="" width="120">
+                    <div class="qr-box">
+                      <div class="qr-comment">
+                        <div>Ut velibus</div>
+                        <div>doluptas</div>
+                      </div>
+                      <img src="img/qr-code.webp" alt="" width="78" class="align-top">
+                    </div>
+                    <div class="mt-50">
+                      <div class="mb-38">
+                        <h1>Prosecco</h1>
+                        <h2>
+                          <span class="mr-8">NV/MV</span>
+                          <span class="mr-8">Italy</span>
+                          <span>Trentino</span>
+                        </h2>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                          <div>
+                            <h3>Taste</h3>
+                            <p>Bright, light, subtle and with a well-balanced ﬂavour. Pleasantly persistent and fragrant.</p>
+                          </div>
+                          <div>
+                            <h3>COLOR</h3>
+                            <p>Straw yellow color with clear greenish highlights, bright and with a reﬁned perlage.</p>
+                          </div>
+                          <div>
+                            <h3>NOSE</h3>
+                            <p>A fruity fragrance reminiscent of white-ﬂeshed fruits and with slight citrus hints.</p>
+                          </div>
+                          <div>
+                            <h3>SERVING SUGGESTIONS</h3>
+                            <p>Enjoy as an aperitif or with appetizers, seafood, cheeses and nuts. Also, a great pair with cured meats and desserts.</p>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div>
+                            <h3>WINEMAKER</h3>
+                            <p>Fabrizio Marinconz</p>
+                          </div>
+                          <div>
+                            <h3>GRAPES</h3>
+                            <p>100% Glera</p>
+                          </div>
+                          <div>
+                            <h3>ANALYSIS</h3>
+                            <p>Alcohol: 11% TA: 5.5 g/l RS: 18 g/l</p>
+                          </div>
+                          <div>
+                            <h3>APPELLATION</h3>
+                            <p>Prosecco Doc</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <div class="footer-space">&nbsp;</div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="header">
+      <img src="img/palm-bay.webp" alt="" width="180">
+    </div>
+    <div class="footer">
+      <div class="fw-bold">Sales Person</div>
+      <div class="d-flex">
+        <span class="mr-12">sales.person@palmbay.com</span><span>Tel. (561) 893-9998</span>
+        <span class="fw-bold ml-auto">www.palmbay.com</span>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
