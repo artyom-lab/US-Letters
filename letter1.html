@@ -93,8 +93,11 @@
       .mr-12 {
         margin-right: 12px; }
 
-      .mt-16 {
-        margin-top: 16px; }
+      .mt-24 {
+        margin-top: 24px; }
+
+      .mt-30 {
+        margin-top: 30px; }
 
       .mb-38 {
         margin-bottom: 38px; }
@@ -107,7 +110,7 @@
 
       .main {
         border: 1px solid #B4AD93;
-        height: 100%; }
+        height: calc(100vh - 180px); }
 
       .bg-gray {
         text-align: center;
@@ -121,7 +124,8 @@
         margin-top: -52px; }
 
       .content {
-        padding: 50px 15px 30px 50px; }
+        padding: 15px 15px 30px 50px;
+        flex-grow: 1; }
 
       .row {
         display: flex;
@@ -186,11 +190,6 @@
         font-size: 12px;
         margin-bottom: 16px; }
 
-      .qr-box {
-        position: absolute;
-        top: 12px;
-        right: 14px; }
-
       .qr-comment {
         color: #BB934D;
         display: inline-block;
@@ -199,7 +198,14 @@
         margin-right: 6px;
         text-align: right;
         vertical-align: top; }
+
+      .column {
+        column-count: 2;
+        column-gap: 30px; }
        
+      .column .box {
+        break-inside: avoid; }
+
     </style>
     
 </head>
@@ -222,20 +228,24 @@
               <div class="row row-0 h-100"> 
                 <div class="col-auto">
                   <div class="bg-gray">
-                    <img src="img/prosecco.webp" alt="">
+                    <img src="img/prosecco.webp" alt="" width="220">
                   </div>
                 </div>
-                <div class="col">
+                <div class="col d-flex">
                   <div class="content">
-                    <img src="img/cavit.webp" alt="" width="120">
-                    <div class="qr-box">
-                      <div class="qr-comment">
-                        <div>Ut velibus</div>
-                        <div>doluptas</div>
+                    <div class="row">
+                      <div class="col mt-30">
+                        <img src="img/cavit.webp" alt="" width="120">
                       </div>
-                      <img src="img/qr-code.webp" alt="" width="78" class="align-top">
+                      <div class="col-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-code.webp" alt="" width="78">
+                      </div>
                     </div>
-                    <div class="mt-16">
+                    <div class="mt-24">
                       <div class="mb-38">
                         <h1>Prosecco</h1>
                         <h2>
@@ -244,42 +254,38 @@
                           <span>Trentino</span>
                         </h2>
                       </div>
-                      <div class="row">
-                        <div class="col">
-                          <div>
-                            <h3>Taste</h3>
-                            <p>Bright, light, subtle and with a well-balanced ﬂavour. Pleasantly persistent and fragrant.</p>
-                          </div>
-                          <div>
-                            <h3>COLOR</h3>
-                            <p>Straw yellow color with clear greenish highlights, bright and with a reﬁned perlage.</p>
-                          </div>
-                          <div>
-                            <h3>NOSE</h3>
-                            <p>A fruity fragrance reminiscent of white-ﬂeshed fruits and with slight citrus hints.</p>
-                          </div>
-                          <div>
-                            <h3>SERVING SUGGESTIONS</h3>
-                            <p>Enjoy as an aperitif or with appetizers, seafood, cheeses and nuts. Also, a great pair with cured meats and desserts.</p>
-                          </div>
+                      <div class="column">
+                        <div class="box">
+                          <h3>TASTE</h3>
+                          <p>Bright, light, subtle and with a well-balanced ﬂavour. Pleasantly persistent and fragrant.</p>
                         </div>
-                        <div class="col">
-                          <div>
-                            <h3>WINEMAKER</h3>
-                            <p>Fabrizio Marinconz</p>
-                          </div>
-                          <div>
-                            <h3>GRAPES</h3>
-                            <p>100% Glera</p>
-                          </div>
-                          <div>
-                            <h3>ANALYSIS</h3>
-                            <p>Alcohol: 11% TA: 5.5 g/l RS: 18 g/l</p>
-                          </div>
-                          <div>
-                            <h3>APPELLATION</h3>
-                            <p>Prosecco Doc</p>
-                          </div>
+                        <div class="box">
+                          <h3>COLOR</h3>
+                          <p>Straw yellow color with clear greenish highlights, bright and with a reﬁned perlage.</p>
+                        </div>
+                        <div class="box">
+                          <h3>NOSE</h3>
+                          <p>A fruity fragrance reminiscent of white-ﬂeshed fruits and with slight citrus hints.</p>
+                        </div>
+                        <div class="box">
+                          <h3>SERVING SUGGESTIONS</h3>
+                          <p>Enjoy as an aperitif or with appetizers, seafood, cheeses and nuts. Also, a great pair with cured meats and desserts.</p>
+                        </div>
+                        <div class="box">
+                          <h3>WINEMAKER</h3>
+                          <p>Fabrizio Marinconz</p>
+                        </div>
+                        <div class="box">
+                          <h3>GRAPES</h3>
+                          <p>100% Glera</p>
+                        </div>
+                        <div class="box">
+                          <h3>ANALYSIS</h3>
+                          <p>Alcohol: 11% TA: 5.5 g/l RS: 18 g/l</p>
+                        </div>
+                        <div class="box">
+                          <h3>APPELLATION</h3>
+                          <p>Prosecco Doc</p>
                         </div>
                       </div>
                     </div>
