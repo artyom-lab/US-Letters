@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <style>
         @page {
-            size: letter landscape;
+            size: letter portrait;
             margin: 0cm !important;
             padding: 0cm !important;
         }
@@ -46,14 +46,15 @@
 
       body {
         font-family: "DM Sans", sans-serif;
+        font-size: 12px;
         margin: 0; }
 
       .header, .footer{
         position: fixed;
         left: 0;
         right: 0;
-        padding-left: 70px;
-        padding-right: 70px; }
+        padding-left: 46px;
+        padding-right: 46px; }
 
       .header {
         top: 0;
@@ -74,12 +75,17 @@
         height: 72px; }
 
       .relative {
-        margin-right: 70px;
-        margin-left: 70px; }
+        margin-right: 46px;
+        margin-left: 46px; }
 
       table {
         width: 100%;
         height: 100vh; }
+
+      tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px; }
 
       .d-flex {
         display: flex; }
@@ -87,41 +93,50 @@
       .fw-bold {
         font-weight: bold; }
 
-      .mr-8 {
-        margin-right: 8px; }
+      .text-right {
+        text-align: right; }
 
       .mr-12 {
         margin-right: 12px; }
 
-      .mt-16 {
-        margin-top: 16px; }
-
-      .mb-38 {
-        margin-bottom: 38px; }
+      .mt-auto {
+        margin-top: auto; }
 
       .ml-auto {
         margin-left: auto; }
 
-      .h-100 {
-        height: 100%;; }
+      .flex-grow-1 {
+        flex-grow: 1; }
 
       .main {
         border: 1px solid #B4AD93;
-        height: 100%; }
+        display: flex;
+        flex-direction: column;
+        min-height: calc(100vh - 180px); }
 
       .bg-gray {
         text-align: center;
         background-color: #E5E4D5;
-        border-right: 1px solid #B4AD93;
-        width: 340px;
-        height: 100%; }
+        border-left: 1px solid #B4AD93;
+        width: 232px;
+        min-height: 310px; }
+
+      .bg-white {
+        border-left: 1px solid #B4AD93;
+        width: 232px;
+        flex-grow: 1;
+        display: flex; }
 
       .bg-gray img {
         object-fit: contain;
-        margin-top: -52px; }
+        margin-top: -42px;
+        margin-bottom: 20px; }
 
       .content {
-        padding: 50px 15px 30px 50px; }
+        padding: 24px 24px 16px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; }
 
       .row {
         display: flex;
@@ -158,12 +173,13 @@
 
       .h1, h1 {
         font-family: "Marcellus", sans-serif;
-        font-size: 36px;
+        font-size: 40px;
         font-weight: normal;
-        color: #050F24;
+        color: #030836;
+        line-height: 1.2;
         margin-bottom: 8px;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;  
         overflow: hidden; }
 
@@ -186,20 +202,55 @@
         font-size: 12px;
         margin-bottom: 16px; }
 
-      .qr-box {
-        position: absolute;
-        top: 12px;
-        right: 14px; }
-
       .qr-comment {
         color: #BB934D;
         display: inline-block;
         font-size: 12px;
         line-height: 1;
         margin-right: 6px;
+        margin-bottom: 2px;
         text-align: right;
-        vertical-align: top; }
+        vertical-align: bottom; }
+
+      .column {
+        column-count: 2;
+        column-gap: 30px; }
        
+      .column .box {
+        break-inside: avoid; }
+
+      .brand-box {
+        margin-bottom: 24px; }
+
+      .brand-box img {
+        vertical-align: middle;
+        margin-right: 16px; }
+
+      .border-bottom {
+        border-bottom: 1px solid #B4AD93; }
+
+      .list {
+        margin-top: 6px;
+        margin-bottom: 16px;
+        padding-left: 20px; }
+
+      .list li {
+        margin-bottom: 2px; }
+
+      .list li::marker {
+        color: #BB934D; }
+
+      .main-blue {
+        border-color: #265185; }
+        .main-blue .bg-gray {
+          background: #030836; }
+        .main-blue .bg-gray, .main-blue .border-bottom, .main-blue .bg-white {
+          border-color: #265185; }
+        .main-blue h2, h3, .main-blue .qr-comment {
+          color: #265185; }
+        .main-blue .list li::marker {
+          color: #265185; }
+
     </style>
     
 </head>
@@ -219,68 +270,328 @@
         <tr>
           <td>
             <div class="main">
-              <div class="row row-0 h-100"> 
-                <div class="col-auto">
-                  <div class="bg-gray">
-                    <img src="img/prosecco.webp" alt="">
+              <div class="row row-0 border-bottom"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="brand-box">
+                      <img src="img/cavit.webp" alt="" width="90">
+                    </div>
+                    <div class="mt-auto">
+                      <h1>Oak Zero <br> Chardonnay</h1>
+                      <h2>
+                        <span class="mr-12">NV/MV</span>
+                        <span class="mr-12">Italy</span>
+                        <span>Trentino</span>
+                      </h2>
+                    </div>
                   </div>
                 </div>
-                <div class="col">
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/chardonnay.webp" alt="" width="115">
+                  </div>
+                </div>
+              </div> 
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col d-flex">
                   <div class="content">
-                    <img src="img/cavit.webp" alt="" width="120">
-                    <div class="qr-box">
-                      <div class="qr-comment">
-                        <div>Ut velibus</div>
-                        <div>doluptas</div>
-                      </div>
-                      <img src="img/qr-code.webp" alt="" width="78" class="align-top">
+                    <div>
+                      <h3>BACKGROUND</h3>
+                      <p>Combine a half-century of winemaking expertise, the dramatic landscape and terroir of northern Italy, and a profound enjoyment of the good things in life. The result: the Cavit Collection, source of America’s #1 Italian wine*.The Cavit winery is based in Trentino, a picturesque landscape of mountains, lakes, apple orchards and medieval castles. Vineyards in this region enjoy the warming effects of the Ora del Garda, a dry, balmy breeze that sweeps across Lake Garda and protects the fruit from external moisture and disease. Contrastingly cool evenings promote rich, intense aromas and ﬂavors in the grapes. Through the years, savvy wine lovers have come to depend on Cavit’s stellar range of high-quality, approachable, and versatile wines as their favorite “go-to” source, perfect for any occasion. <br><i>*Nielsen XAOC + Liq 52 w/e 4/22/23</i></p>
                     </div>
-                    <div class="mt-16">
-                      <div class="mb-38">
-                        <h1>Prosecco</h1>
-                        <h2>
-                          <span class="mr-8">NV/MV</span>
-                          <span class="mr-8">Italy</span>
-                          <span>Trentino</span>
-                        </h2>
+                    <div>
+                      <h3>VINTAGE NOTES & TERROIR</h3>
+                      <p>After harvesting - rigorously by hand - the grapes used to produce Cavit Collection Rosé are pressed and viniﬁed separately at a controlled temperature of 20°C and without maceration in order to minimize the transfer of color from the skins of the grapes.</p>
+                    </div>
+                    <div>
+                      <h3>WINEMAKING & AGING</h3>
+                      <p>The wine is not oak aged, the salient characteristic of which are extreme purity and concentrated fruit. It is bottled early to preserve freshness and then bottle-aged before leaving the winery.</p>
+                    </div>
+                    <div>
+                      <h3>TASTING NOTES</h3>
+                      <p>Well balanced, fresh, dry, light and crisp. Delicate and pleasing strawberry aroma & ﬂavors of raspberries, cherries and watermelon. Ideal with all ﬁsh dishes, white meat and lighter ﬁrst courses. Also excellent as an aperitif. Enjoy well chilled.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto d-flex">
+                  <div class="bg-white">
+                    <div class="content">
+                      <div>
+                        <h3>GRAPE VARIETIES</h3>
+                        <p>100% Gewurztraminer</p>
                       </div>
-                      <div class="row">
-                        <div class="col">
-                          <div>
-                            <h3>Taste</h3>
-                            <p>Bright, light, subtle and with a well-balanced ﬂavour. Pleasantly persistent and fragrant.</p>
-                          </div>
-                          <div>
-                            <h3>COLOR</h3>
-                            <p>Straw yellow color with clear greenish highlights, bright and with a reﬁned perlage.</p>
-                          </div>
-                          <div>
-                            <h3>NOSE</h3>
-                            <p>A fruity fragrance reminiscent of white-ﬂeshed fruits and with slight citrus hints.</p>
-                          </div>
-                          <div>
-                            <h3>SERVING SUGGESTIONS</h3>
-                            <p>Enjoy as an aperitif or with appetizers, seafood, cheeses and nuts. Also, a great pair with cured meats and desserts.</p>
-                          </div>
+                      <div>
+                        <h3>TECHNICAL DETAILS</h3>
+                        <div>
+                          <div>ABV: 12%, TA: 5.5 g/l, RS: 3.5 g/l</div>
+                          <ul class="list">
+                            <li>Gluten Free</li>
+                            <li>Vegan</li>
+                            <li>Screw Top</li>
+                            <li>ECO-Friendly producer</li>
+                          </ul>
                         </div>
-                        <div class="col">
-                          <div>
-                            <h3>WINEMAKER</h3>
-                            <p>Fabrizio Marinconz</p>
-                          </div>
-                          <div>
-                            <h3>GRAPES</h3>
-                            <p>100% Glera</p>
-                          </div>
-                          <div>
-                            <h3>ANALYSIS</h3>
-                            <p>Alcohol: 11% TA: 5.5 g/l RS: 18 g/l</p>
-                          </div>
-                          <div>
-                            <h3>APPELLATION</h3>
-                            <p>Prosecco Doc</p>
-                          </div>
+                      </div>
+                      <div>
+                        <h3>WINEMAKER</h3>
+                        <p>Fabrizio Marinconz</p>
+                      </div>
+                      <div>
+                        <h3>AWARDS</h3>
+                        <p>94 points, Wine Enthusiast December 2022 - Gold Award 87 points, Wine Enthusiast December 2021 - Gold Award 92 points, Wine Enthusiast December 2020 - Double Gold Awards</p>
+                      </div>
+                      <div class="text-right mt-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
                         </div>
+                        <img src="img/qr-yellow.webp" alt="" width="78">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="row row-0 border-bottom"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="brand-box">
+                      <img src="img/trimbach-brand.webp" alt="" width="90">
+                      <img src="img/taub.webp" alt="" width="90">
+                    </div>
+                    <div class="mt-auto">
+                      <h1>“Frédéric Émile” <br> Riesling</h1>
+                      <h2>
+                        <span class="mr-12">NV/MV</span>
+                        <span class="mr-12">France</span>
+                        <span>ALSACE</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/trimbach.webp" alt="" width="75">
+                  </div>
+                </div>
+              </div> 
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div>
+                      <h3>BACKGROUND</h3>
+                      <p>The Trimbach’s have a purist vision. For three centuries and across 13 generations, the family has produced wines that are structured, long-lived, fruity, elegant and balanced: the celebrated Trimbach style. The family personally looks after each operation, from planting to harvests and from viniﬁcation to bottling. <br> The viticultural origin of the Trimbach family dates back to 1626, when Jean Trimbach, was recognized as a citizen of Riquewihr. From then on, the Trimbach’s were renowned for their wine-growing. Maison Trimbach’s vineyards are all situated around Ribeauville (Ribeauville, Hunawihr, Bergheim, Rorschwihr, Riquewihr and Mittlewihr). They beneﬁt from the unique Alsatian microclimate, thanks to the Vosges Mountains protection, which preserves the plain from the rain. The vineyards were planted on the Ribeauville’s fault line that fractured 50 million years ago between the Vosges Mountain range and the Black Forest offering a mosaic of terroirs including the complex calcareous limestone and bio-degraded seashell fossils called “Muschelkalk.”</p>
+                    </div>
+                    <div>
+                      <h3>VINTAGE NOTES & TERROIR</h3>
+                      <p>2016 had a mild winter, with heavy spring rains replenishing the water reserves. A hot and sunny summer with peak temperatures at the end of August resulted in beautiful maturity. Harvest had cool but sunny conditions.</p>
+                    </div>
+                    <div>
+                      <h3>WINEMAKING & AGING</h3>
+                      <p>The wine was bottled in spring. After seven years of ageing in the cellar the wine expresses all its potential to develop further, expressing its terroir, with aging potential of 20+ years.</p>
+                    </div>
+                    <div>
+                      <h3>TASTING NOTES</h3>
+                      <p>This wine reveals a great aromatic complexity. Citrus, white ﬂowers, and ﬂinty  mineral notes. The mouthfeel is ample and rich, while remaining precise balanced by chiseled acidity. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto d-flex">
+                  <div class="bg-white">
+                    <div class="content">
+                      <div>
+                        <h3>GRAPE VARIETIES</h3>
+                        <p>100% Riesling</p>
+                      </div>
+                      <div>
+                        <h3>TECHNICAL DETAILS</h3>
+                        <div>
+                          <div>ABV: 13.2%, TA: 5.5 g/l, RS: 3.13 g/l</div>
+                          <ul class="list">
+                            <li>Gluten Free</li>
+                            <li>Vegan</li>
+                            <li>Screw Top</li>
+                            <li>ECO-Friendly producer</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h3>WINEMAKER</h3>
+                        <p>Fabrizio Marinconz</p>
+                      </div>
+                      <div>
+                        <h3>AWARDS</h3>
+                        <p>96 points, jamessuckling.com September 2014 - Gold Award 95 points, jamessuckling.com September 2013 - Gold Award</p>
+                      </div>
+                      <div class="text-right mt-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-yellow.webp" alt="" width="78">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main main-blue">
+              <div class="row row-0 border-bottom"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="brand-box">
+                      <img src="img/gunpowder.webp" alt="" width="75">
+                    </div>
+                    <div class="mt-auto">
+                      <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+                      <h2>
+                        <span class="mr-12">NV/MV</span>
+                        <span class="mr-12">IRELAND</span>
+                        <span>LEITRIM</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/shanbo.webp" alt="" width="160">
+                  </div>
+                </div>
+              </div> 
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div>
+                      <h3>BACKGROUND</h3>
+                      <p>“The Curious Journey of a Curious Mind. It takes an inquisitive, pioneering spirit to produce the most remarkable results. Throughout the years PJ Rigney has taken many journeys from familiar into terra incognita. In time, those travels brought him to the wild and unspoiled landscape of Drumshanbo, Co Leitrim. It was here that his curious mind, ﬁlled with the great oriental traditions of distilling fruit, herbs and botanicals, got to work. He created The Shed Distillery of PJ Rigney, with its medieval copper pot stills, and began a quest to fuse oriental botanicals with the local Irish ones. The result of this passionate exploration is Drumshanbo Gunpowder Irish Gin unique, extraordinary and remarkable as the elusive creature in the ﬁelds, the Drumshanbo Jackalope.PJs adventures led him to the sun-kissed western coast of the United States of America, where his Curious Mind was drawn north of San Francisco Bay. The local people introduced him to the sumptuous richness of orange citrus fruit. PJ recognised immediately how this bright and colourful burst of fresh California orange citrus would meld into the existing exotic layers of fresh citrus, giving birth to an authentic American edition.” </p>
+                    </div>
+                    <div>
+                      <h3>PALATE</h3>
+                      <p>Delightfully fresh and rounded up front with refreshing notes of juniper and spice, followed by a burst of California orange citrus.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto d-flex">
+                  <div class="bg-white">
+                    <div class="content">
+                      <div>
+                        <h3>TECHNICAL DETAILS</h3>
+                        <div>
+                          <div>ABV: 43%, TA: 5.5 g/l, RS: 3.5 g/l</div>
+                          <ul class="list">
+                            <li>Gluten Free</li>
+                            <li>Vegan</li>
+                            <li>Screw Top</li>
+                            <li>ECO-Friendly producer</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h3>COLOR</h3>
+                        <p>Crystalline</p>
+                      </div>
+                      <div>
+                        <h3>NOSE</h3>
+                        <p>Gunpowder tea with Oriental botanicals are complemented  by bright notes of California  orange citrus.</p>
+                      </div>
+                      <div>
+                        <h3>AWARDS</h3>
+                        <p>94 points, Wine Enthusiast December 2022 - Gold Award 87 points, Wine Enthusiast December 2021 - Gold Award</p>
+                      </div>
+                      <div class="text-right mt-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-blue.webp" alt="" width="78">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main main-blue">
+              <div class="row row-0 border-bottom"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="brand-box">
+                      <img src="img/jacobs.webp" alt="" width="100">
+                    </div>
+                    <div class="mt-auto">
+                      <h1>Small Batch <br> Recipe #2</h1>
+                      <h2>
+                        <span class="mr-12">NV/MV</span>
+                        <span class="mr-12">USA</span>
+                        <span>KENTUCKY</span>
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/pardon.webp" alt="" width="160">
+                  </div>
+                </div>
+              </div> 
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col d-flex">
+                  <div class="content">
+                    <div>
+                      <h3>BACKGROUND</h3>
+                      <p>Brothers. Bootleggers. Legends. Nearly a century ago, Jacob and Abner Taub crafted and bootlegged their own whiskey during Prohibition to support their family. Then one fateful winter night in 1929, their world came crashing down during a sting that would land the brothers behind bars.Six long years later, Franklin D. Roosevelt pardoned the Taub brothers. They were able to reignite their family business with their brother Martin and help launch Baltimore Club Whiskey. This would set into motion a family tradition that would span generations. The brothers served their time, and now, and now the Taub family continues this legacy with the introduction of Jacob’s Pardon, a ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and frankly, a little liberating. It would be a crime not to enjoy it. </p>
+                    </div>
+                    <div>
+                      <h3>PALATE</h3>
+                      <p>Tastes of cocoa butter, clove, caramel and baked honey ham. Deliciously assertive.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-auto d-flex">
+                  <div class="bg-white">
+                    <div class="content">
+                      <div>
+                        <h3>TECHNICAL DETAILS</h3>
+                        <div>
+                          <div>ABV: 54.65%, TA: 5.5 g/l, RS: 3.5 g/l</div>
+                          <ul class="list">
+                            <li>Gluten Free</li>
+                            <li>Vegan</li>
+                            <li>Screw Top</li>
+                            <li>ECO-Friendly producer</li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div>
+                        <h3>COLOR</h3>
+                        <p>Rich gold, amber with ﬂawless clarity.</p>
+                      </div>
+                      <div>
+                        <h3>NOSE</h3>
+                        <p>Fragrances of dry cereal, corn and baking spice.</p>
+                      </div>
+                      <div>
+                        <h3>AWARDS</h3>
+                        <p>94 points, Wine Enthusiast December 2022 - Gold Award 87 points, Wine Enthusiast December 2021 - Gold Award</p>
+                      </div>
+                      <div class="text-right mt-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-blue.webp" alt="" width="78">
                       </div>
                     </div>
                   </div>

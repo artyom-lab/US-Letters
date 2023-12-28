@@ -96,22 +96,19 @@
       .mt-24 {
         margin-top: 24px; }
 
-      .mt-30 {
-        margin-top: 30px; }
-
       .mb-38 {
         margin-bottom: 38px; }
 
       .ml-auto {
         margin-left: auto; }
 
-      .h-100 {
-        height: 100%;; }
+      .flex-grow-1 {
+        flex-grow: 1; }
 
       .main {
         border: 1px solid #B4AD93;
         min-height: calc(100vh - 180px);
-        height: 100%; }
+        display: flex; }
 
       .bg-gray {
         text-align: center;
@@ -206,6 +203,13 @@
        
       .column .box {
         break-inside: avoid; }
+       
+      .brand-box img {
+        vertical-align: middle;
+        margin-right: 16px; }
+       
+      .brand-box {
+        margin-top: 30px; }
 
     </style>
     
@@ -226,7 +230,7 @@
         <tr>
           <td>
             <div class="main">
-              <div class="row row-0 h-100"> 
+              <div class="row row-0 flex-grow-1"> 
                 <div class="col-auto">
                   <div class="bg-gray">
                     <img src="img/prosecco.webp" alt="" width="220">
@@ -235,8 +239,10 @@
                 <div class="col d-flex">
                   <div class="content">
                     <div class="row">
-                      <div class="col mt-30">
-                        <img src="img/cavit.webp" alt="" width="120">
+                      <div class="col">
+                        <div class="brand-box">
+                          <img src="img/cavit.webp" alt="" width="120">
+                        </div>
                       </div>
                       <div class="col-auto">
                         <div class="qr-comment">
