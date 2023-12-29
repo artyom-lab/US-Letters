@@ -96,14 +96,29 @@
       .mb-16 {
         margin-bottom: 16px; }
 
+      .mb-8 {
+        margin-bottom: 8px; }
+
+      .mb-4 {
+        margin-bottom: 4px; }
+
       .mb-38 {
         margin-bottom: 38px; }
 
       .ml-auto {
         margin-left: auto; }
 
+      .golden {
+        color: #CA9049; }
+
       .flex-grow-1 {
         flex-grow: 1; }
+
+      .align-items-center {
+        align-items: center; }
+
+      .text-center {
+        text-align: center; }
 
       .main {
         border: 1px solid #B4AD93;
@@ -124,10 +139,10 @@
         object-fit: contain;
         margin-top: -52px;
         margin-bottom: 20px;
-        max-height: calc(100vh - 160px) }
+        max-height: calc(100vh - 160px); }
 
       .content {
-        padding: 15px 15px 30px 50px;
+        padding: 15px 15px 24px 50px;
         flex-grow: 1; }
 
       .row {
@@ -142,6 +157,20 @@
         .row-0 > [class*='col'] {
           padding-left: 0;
           padding-right: 0; }
+
+      .row-4 {
+        margin-left: -4px;
+        margin-right: -4px; }
+        .row-4 > [class*='col'] {
+          padding-left: 4px;
+          padding-right: 4px; }
+
+      .row-12 {
+        margin-left: -12px;
+        margin-right: -12px; }
+        .row-12 > [class*='col'] {
+          padding-left: 12px;
+          padding-right: 12px; }
 
       .col-auto {
         flex: 0 0 auto;
@@ -161,7 +190,7 @@
         padding-left: 15px; }
 
       .title-box {
-        height: 154px;
+        height: 138px;
         display: flex;
         align-items: end; }
 
@@ -172,7 +201,8 @@
         font-family: "Marcellus", sans-serif;
         font-size: 36px;
         font-weight: normal;
-        color: #050F24;
+        line-height: 1.1;
+        color: #030836;
         margin-bottom: 8px;
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -181,14 +211,14 @@
 
       .h2, h2 {
         font-size: 13px;
-        color: #BB934D;
+        color: #CA9049;
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 8px; }
 
       .h3, h3 {
         font-size: 12px;
-        color: #BB934D;
+        color: #CA9049;
         font-weight: bold;
         margin-bottom: 4px;
         text-transform: uppercase;
@@ -199,7 +229,7 @@
         margin-bottom: 16px; }
 
       .qr-comment {
-        color: #BB934D;
+        color: #CA9049;
         display: inline-block;
         font-size: 12px;
         line-height: 1;
@@ -214,12 +244,43 @@
       .column .box {
         break-inside: avoid; }
        
-      .brand-box img {
-        vertical-align: middle;
-        margin-right: 16px; }
-       
       .brand-box {
-        margin-top: 30px; }
+        margin-top: 20px; }
+       
+      .points-box {
+        font-size: 14px; }
+       
+      .points-box .points {
+        color: #CA9049; }
+       
+      .points-box .number {
+        font-family: "Marcellus", sans-serif;
+        font-size: 40px;
+        line-height: 0.9; }
+
+      .points-box .img-gold {
+        width: 45px; }
+
+      .points-box-big {
+        font-size: 16px; }
+
+      .points-box-big .points {
+        font-size: 18px; }
+
+      .points-box-big .number {
+        font-size: 60px; }
+
+      .points-box-big .img-gold {
+        width: 60px; }
+
+      .main-blue {
+        border-color: #265185; }
+        .main-blue .bg-gray {
+          background: #030836; }
+        .main-blue .bg-gray {
+          border-color: #265185; }
+        .main-blue h2, .main-blue h3, .main-blue .golden, .main-blue .qr-comment, .main-blue .points-box .points  {
+          color: #265185; }
 
     </style>
     
@@ -248,10 +309,12 @@
                 </div>
                 <div class="col d-flex">
                   <div class="content">
-                    <div class="row mb-16">
+                    <div class="row mb-8">
                       <div class="col">
-                        <div class="brand-box">
-                          <img src="img/cavit.webp" alt="" width="120">
+                        <div class="row row-12 align-items-center brand-box">
+                          <div class="col-auto">
+                            <img src="img/cavit.webp" alt="" width="120">
+                          </div>
                         </div>
                       </div>
                       <div class="col-auto">
@@ -304,6 +367,138 @@
                       <div class="box">
                         <h3>APPELLATION</h3>
                         <p>Prosecco Doc</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/trimbach.webp" alt="" width="220">
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="row mb-8">
+                      <div class="col">
+                        <div class="row row-12 align-items-center brand-box">
+                          <div class="col-auto">
+                            <img src="img/trimbach-brand.webp" alt="" width="120">
+                          </div>
+                          <div class="col-auto">
+                            <img src="img/taub.webp" alt="" width="90">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-code.webp" alt="" width="78">
+                      </div>
+                    </div>
+                    <div class="mb-38">
+                      <div class="title-box">
+                        <h1>“Frédéric Émile” <br>  Riesling</h1>
+                      </div>
+                      <h2>
+                        <span class="mr-8">NV/MV</span>
+                        <span class="mr-8">ALSACE</span>
+                        <span>FRANCE</span>
+                      </h2>
+                    </div>
+                    <div class="points-box">
+                      <div class="row row-4 mb-16">
+                        <div class="col-auto text-center">
+                          <div class="points mb-4">
+                            <div class="number">96</div>
+                            <i>Points</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="mb-4">It is hard to imagine a more classic Alsace dry riesling than this masterpiece of ﬁnely-chiselled elegance. So many candied citrus and citrus blossom nuances. Stunning balance on the medium-bodied palate with more than enough structure for long aging. Very racy ﬁnish with notes of wild herbs and fresh almonds. </div>
+                          <i class="golden">JamesSuckling.com – March 2023</i>
+                        </div>
+                      </div>
+                      <div class="row row-4">
+                        <div class="col-auto text-center">
+                          <div class="points mb-4">
+                            <div class="number">95</div>
+                            <i>Points</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="mb-4">The merest whisper of passion fruit alongside vivid notions of citrus zest. Ripe lemon is at the front and carries right over to  the taut palate. This is textured and focused on purity and drive. The palate is compact, bundled and bullet-like.</div>
+                          <i class="golden">Vinous – January 2023</i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>   
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="row row-0 flex-grow-1"> 
+                <div class="col-auto">
+                  <div class="bg-gray">
+                    <img src="img/prosecco.webp" alt="" width="220">
+                  </div>
+                </div>
+                <div class="col d-flex">
+                  <div class="content">
+                    <div class="row mb-8">
+                      <div class="col">
+                        <div class="row row-12 align-items-center brand-box">
+                          <div class="col-auto">
+                            <img src="img/cavit.webp" alt="" width="120">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto">
+                        <div class="qr-comment">
+                          <div>Ut velibus</div>
+                          <div>doluptas</div>
+                        </div>
+                        <img src="img/qr-code.webp" alt="" width="78">
+                      </div>
+                    </div>
+                    <div class="mb-38">
+                      <div class="title-box">
+                        <h1>Prosecco</h1>
+                      </div>
+                      <h2>
+                        <span class="mr-8">NV/MV</span>
+                        <span class="mr-8">Italy</span>
+                        <span>Trentino</span>
+                      </h2>
+                    </div>
+                    <div class="points-box points-box-big">
+                      <div class="row row-4">
+                        <div class="col-auto text-center">
+                          <div class="points mb-4">
+                            <div class="number">92</div>
+                            <i>Points</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <div class="col">
+                          <div class="mb-4">Straw yellow colour with clear greenish highlights, bright and with a reﬁned perlage. A fruity fragrance reminiscent of white-ﬂeshed fruits and with slight citrus hints. Bright, light, subtle and with a well-balanced ﬂavor. Pleasantly persistent and fragrant.</div>
+                          <i class="golden">San Diego International Wine & Spirits Challenge March 2018</i>
+                        </div>
                       </div>
                     </div>
                   </div>

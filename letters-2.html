@@ -108,6 +108,9 @@
       .flex-grow-1 {
         flex-grow: 1; }
 
+      .align-items-center {
+        align-items: center; }
+
       .main {
         border: 1px solid #B4AD93;
         display: flex;
@@ -119,7 +122,8 @@
         background-color: #E5E4D5;
         border-left: 1px solid #B4AD93;
         width: 232px;
-        min-height: 310px; }
+        min-height: 310px;
+        height: 100%; }
 
       .bg-white {
         border-left: 1px solid #B4AD93;
@@ -150,6 +154,13 @@
         .row-0 > [class*='col'] {
           padding-left: 0;
           padding-right: 0; }
+
+      .row-8 {
+        margin-left: -8px;
+        margin-right: -8px; }
+        .row-8 > [class*='col'] {
+          padding-left: 8px;
+          padding-right: 8px; }
 
       .col-auto {
         flex: 0 0 auto;
@@ -185,14 +196,14 @@
 
       .h2, h2 {
         font-size: 13px;
-        color: #BB934D;
+        color: #CA9049;
         font-weight: bold;
         text-transform: uppercase;
         margin-bottom: 8px; }
 
       .h3, h3 {
         font-size: 12px;
-        color: #BB934D;
+        color: #CA9049;
         font-weight: bold;
         margin-bottom: 4px;
         text-transform: uppercase;
@@ -203,7 +214,7 @@
         margin-bottom: 16px; }
 
       .qr-comment {
-        color: #BB934D;
+        color: #CA9049;
         display: inline-block;
         font-size: 12px;
         line-height: 1;
@@ -222,10 +233,6 @@
       .brand-box {
         margin-bottom: 24px; }
 
-      .brand-box img {
-        vertical-align: middle;
-        margin-right: 16px; }
-
       .border-bottom {
         border-bottom: 1px solid #B4AD93; }
 
@@ -238,7 +245,7 @@
         margin-bottom: 2px; }
 
       .list li::marker {
-        color: #BB934D; }
+        color: #CA9049; }
 
       .main-blue {
         border-color: #265185; }
@@ -246,7 +253,7 @@
           background: #030836; }
         .main-blue .bg-gray, .main-blue .border-bottom, .main-blue .bg-white {
           border-color: #265185; }
-        .main-blue h2, h3, .main-blue .qr-comment {
+        .main-blue h2, .main-blue h3, .main-blue .qr-comment {
           color: #265185; }
         .main-blue .list li::marker {
           color: #265185; }
@@ -273,8 +280,10 @@
               <div class="row row-0 border-bottom"> 
                 <div class="col d-flex">
                   <div class="content">
-                    <div class="brand-box">
-                      <img src="img/cavit.webp" alt="" width="90">
+                    <div class="row row-8 align-items-center brand-box">
+                      <div class="col-auto">
+                        <img src="img/cavit.webp" alt="" width="90">
+                      </div>
                     </div>
                     <div class="mt-auto">
                       <h1>Oak Zero <br> Chardonnay</h1>
@@ -360,9 +369,13 @@
               <div class="row row-0 border-bottom"> 
                 <div class="col d-flex">
                   <div class="content">
-                    <div class="brand-box">
-                      <img src="img/trimbach-brand.webp" alt="" width="90">
-                      <img src="img/taub.webp" alt="" width="90">
+                    <div class="row row-8 align-items-center brand-box">
+                      <div class="col-auto">
+                        <img src="img/trimbach-brand.webp" alt="" width="90">
+                      </div>
+                      <div class="col-auto">
+                        <img src="img/taub.webp" alt="" width="90">
+                      </div>
                     </div>
                     <div class="mt-auto">
                       <h1>“Frédéric Émile” <br> Riesling</h1>
@@ -448,8 +461,10 @@
               <div class="row row-0 border-bottom"> 
                 <div class="col d-flex">
                   <div class="content">
-                    <div class="brand-box">
-                      <img src="img/gunpowder.webp" alt="" width="75">
+                    <div class="row row-8 align-items-center brand-box">
+                      <div class="col-auto">
+                        <img src="img/gunpowder.webp" alt="" width="75">
+                      </div>
                     </div>
                     <div class="mt-auto">
                       <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
@@ -527,8 +542,10 @@
               <div class="row row-0 border-bottom"> 
                 <div class="col d-flex">
                   <div class="content">
-                    <div class="brand-box">
-                      <img src="img/jacobs.webp" alt="" width="100">
+                    <div class="row row-8 align-items-center brand-box">
+                      <div class="col-auto">
+                        <img src="img/jacobs.webp" alt="" width="100">
+                      </div>
                     </div>
                     <div class="mt-auto">
                       <h1>Small Batch <br> Recipe #2</h1>
