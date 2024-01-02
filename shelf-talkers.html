@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter portrait;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #fff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Marcellus&display=swap");
+
+      * {
+          box-sizing: border-box;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        font-size: 12px;
+        display: flex;
+        margin: 10px; }
+
+      .relative {
+        margin: auto; }
+
+      .text-center {
+        text-align: center; }
+
+      .mr-4 {
+        margin-right: 4px; }
+
+      .mb-16 {
+        margin-bottom: 16px; }
+
+      .ml-auto {
+        margin-left: auto; }
+
+      .card-bleed {
+        padding: 11px;
+        position: relative;}
+
+      .card-talker {
+        width: 240px;
+        height: 384px;
+        display: flex;
+        flex-direction: column; }
+
+      .bg-gray {
+        background-color: #EEE2CB;
+        height: 170px;
+        margin-top: -11px;
+        margin-left: -11px;
+        margin-right: -11px;
+        padding: 26px 26px 11px; }
+
+      .bg-gray .img-gold {
+        width: 60px; }
+
+      .points {
+        font-size: 11px;
+        color: #C5B696; }
+       
+      .points .number {
+        font-family: "Marcellus", sans-serif;
+        font-size: 46px;
+        line-height: 0.9; }
+
+      .points .img-gold {
+        width: 45px; }
+
+      .bottle {
+        /*width: 73px;*/
+        height: 152px;
+        object-fit: contain;
+        margin: 0 8px; }
+
+      .content {
+        padding: 16px 16px 4px;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+        flex-grow: 1; }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px; }
+
+      .row-0 {
+        margin-left: 0;
+        margin-right: 0; }
+        .row-0 > [class*='col'] {
+          padding-left: 0;
+          padding-right: 0; }
+
+      .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .h1, h1, .h2, h2, .h3, h3, p {
+        margin-top: 0; }
+
+      .h1, h1 {
+        font-family: "Marcellus", sans-serif;
+        font-size: 18px;
+        font-weight: normal;
+        color: #030836;
+        line-height: 1.2;
+        margin-bottom: 8px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden; }
+
+      .h2, h2 {
+        font-size: 9px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 2px; }
+
+      .h3, h3 {
+        font-size: 8px;
+        font-weight: bold;
+        margin-bottom: 6px; }
+
+      h3 span, h3 img {
+        vertical-align: middle; }
+
+      p {
+        font-size: 8px;
+        margin-bottom: 4px;
+        font-style: italic;
+        color: #000;
+        line-height: 1.5;
+        max-height: 60px;
+        overflow: hidden; }
+
+      .walmart-box {
+        display: flex;
+        align-items: center;
+        margin-top: auto; }
+
+      .text-code {
+        font-size: 7px;
+        text-transform: uppercase; }
+
+      .row-talkers {
+        margin-bottom: 18px; }
+
+      .mark-t1, .mark-t2, .mark-b1, .mark-b2, .mark-l1, .mark-l2, .mark-r1, .mark-r2 {
+        position: absolute;
+        background: #000;
+        z-index: 2;}
+
+      .mark-t1, .mark-t2, .mark-b1, .mark-b2 {
+        width: 1px;
+        height: 10px; }
+
+      .mark-l1, .mark-l2, .mark-r1, .mark-r2 {
+        width: 10px;
+        height: 1px; }
+
+      .mark-t1 {
+        top: -10px;
+        left: 11px; }
+
+      .mark-t2 {
+        top: -10px;
+        right: 11px; }
+
+      .mark-b1 {
+        bottom: -10px;
+        left: 11px; }
+
+      .mark-b2 {
+        bottom: -10px;
+        right: 11px; }
+
+      .mark-l1 {
+        top: 11px;
+        left: -10px; }
+
+      .mark-l2 {
+        bottom: 11px;
+        left: -10px; }
+
+      .mark-r1 {
+        top: 11px;
+        right: -10px; }
+
+      .mark-r2 {
+        bottom: 11px;
+        right: -10px; }
+
+      .row-talkers .col-auto:nth-child(2) .mark-l1, .row-talkers .col-auto:nth-child(2) .mark-l2 {
+        left: -5px; }
+      .row-talkers .col-auto:nth-child(2) .mark-r1, .row-talkers .col-auto:nth-child(2) .mark-r2 {
+        right: -5px; }
+
+      .card-blue h2, .card-blue h3, .card-blue p, .card-blue .points .number {
+          color: #265185; }
+
+      .card-gold h2, .card-gold h3, .card-gold .points .number {
+          color: #CA9049; }
+
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="relative">
+    <div class="row row-0 row-talkers"> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-blue">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">94</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/shanbo.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+              <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+              <h3>
+                <span class="mr-4">Ireland</span>
+                <span class="mr-4">Leitrim</span>
+                <img src="img/logo-blue.webp" alt="" width="10">
+              </h3>
+              <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish includes grapefruit peel and a powdery ﬂoral hint. -K.N.</p>
+              <h3>Wine Enthusiast  November 2023</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-l1"></div>
+          <div class="mark-l2"></div>
+        </div>
+      </div> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-gold">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">82</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/chardonnay.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>CAVIT</h2>
+              <h1>Oak Zero Chardonnay</h1>
+              <h3>
+                <span class="mr-4">Italy</span>
+                <span class="mr-4">Trentino</span>
+                <img src="img/logo-gold.webp" alt="" width="10">
+              </h3>
+              <p>Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity  and forward, the simple palate delivers bright orchard fruit ﬂavor s with a soft ﬁnish.</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-l1"></div>
+          <div class="mark-l2"></div>
+          <div class="mark-r1"></div>
+          <div class="mark-r2"></div>
+        </div>
+      </div> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-blue">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">94</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/shanbo.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+              <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+              <h3>
+                <span class="mr-4">Ireland</span>
+                <span class="mr-4">Leitrim</span>
+                <img src="img/logo-blue.webp" alt="" width="10">
+              </h3>
+              <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish includes grapefruit peel and a powdery ﬂoral hint. -K.N.</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-r1"></div>
+          <div class="mark-r2"></div>
+        </div>
+      </div>
+    </div> 
+    <div class="row row-0 row-talkers"> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-blue">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">94</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/shanbo.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+              <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+              <h3>
+                <span class="mr-4">Ireland</span>
+                <span class="mr-4">Leitrim</span>
+                <img src="img/logo-blue.webp" alt="" width="10">
+              </h3>
+              <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish includes grapefruit peel and a powdery ﬂoral hint. -K.N.</p>
+              <h3>Wine Enthusiast  November 2023</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-l1"></div>
+          <div class="mark-l2"></div>
+        </div>
+      </div> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-gold">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">82</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/chardonnay.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>CAVIT</h2>
+              <h1>Oak Zero Chardonnay</h1>
+              <h3>
+                <span class="mr-4">Italy</span>
+                <span class="mr-4">Trentino</span>
+                <img src="img/logo-gold.webp" alt="" width="10">
+              </h3>
+              <p>Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity  and forward, the simple palate delivers bright orchard fruit ﬂavor s with a soft ﬁnish.</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-l1"></div>
+          <div class="mark-l2"></div>
+          <div class="mark-r1"></div>
+          <div class="mark-r2"></div>
+        </div>
+      </div> 
+      <div class="col-auto">
+        <div class="card-bleed">
+          <div class="card-talker card-blue">
+            <div class="bg-gray">
+              <div class="row row-4">
+                <div class="col-auto text-center">
+                  <div class="points mb-16">
+                    <div class="number">94</div>
+                    <i>Points 2023</i>
+                  </div>
+                  <img src="img/gold.webp" class="img-gold" alt="">
+                </div>
+                <div class="col">
+                  <img src="img/shanbo.webp" class="bottle" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="content">
+              <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+              <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+              <h3>
+                <span class="mr-4">Ireland</span>
+                <span class="mr-4">Leitrim</span>
+                <img src="img/logo-blue.webp" alt="" width="10">
+              </h3>
+              <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish includes grapefruit peel and a powdery ﬂoral hint. -K.N.</h3>
+              <div class="walmart-box">
+                <span class="text-code">CODE1234</span>
+                <img src="img/walmart.webp" class="ml-auto" alt="" width="85">
+              </div>
+            </div>
+          </div>
+          <div class="mark-t1"></div>
+          <div class="mark-t2"></div>
+          <div class="mark-b1"></div>
+          <div class="mark-b2"></div>
+          <div class="mark-r1"></div>
+          <div class="mark-r2"></div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+</body>
+</html>
