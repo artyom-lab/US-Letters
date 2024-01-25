@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter landscape;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #061528 !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Marcellus&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        background: #061528;
+        color: #FFF;
+        margin: 0; }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      .d-flex {
+        display: flex; }
+
+      .flex-column {
+        flex-direction: column; }
+
+      .w-100 {
+        width: 100%; }
+
+      .h-100 {
+        height: 100%; }
+
+      .mb-12 {
+        margin-bottom: 12px; }
+
+      .mb-32 {
+        margin-bottom: 32px; }
+
+      .mt-90 {
+        margin-top: 90px; }
+
+      .mt-85 {
+        margin-top: 85px; }
+
+      .mt-auto {
+        margin-top: auto; }
+
+      .my-auto {
+        margin-top: auto;
+        margin-bottom: auto; }
+
+      .flex-grow-1{
+        flex-grow: 1; }
+
+      .justify-content-center {
+        justify-content: center; }
+
+      .align-items-center {
+        align-items: center; }
+
+      .text-center {
+        text-align: center; }
+
+      .text-uppercase {
+        text-transform: uppercase; }
+
+      .main {
+        height: 100vh;
+        display: flex; }
+
+      .img-box {
+        border-right: 1px solid #334B81;
+        width: 400px;
+        height: 100%;
+        position: relative;
+        background-position: center center;
+        background-size: cover; }
+
+      .qr-box {
+        background: #FFF;
+        position: absolute;
+        font-size: 0;
+        bottom: 22px;
+        left: 22px;
+        padding: 3px; }
+
+      .content {
+        padding: 68px 66px 36px;
+        display: flex;
+        flex-direction: column; }
+
+      .content-2 {
+        padding: 36px 66px; }
+
+      .section-top {
+        padding: 38px 30px;
+        border-bottom: 1px solid #334B81 }
+
+      .section-bottom {
+        padding: 18px 30px;
+        text-align: center;
+        border-top: 1px solid #334B81 }
+
+      .section-bottom-2 {
+        border-top: 1px solid #334B81 }
+
+      .section-bottom-2 .box {
+        padding: 28px 66px; }
+
+      .section-bottom-2 .box-left {
+        font-size: 11px; }
+
+      .section-bottom-2 .box-right {
+        letter-spacing: 2px; 
+        border-left: 1px solid #334B81;}
+
+      .section-middle {
+        padding: 0 30px;
+        border-top: 1px solid #334B81 }
+
+      .point-brown {
+        color: #CA9049;
+        font-size: 30px;
+        line-height: 0.8;}
+
+      .newsreader {
+        font-family: "Newsreader", sans-serif;
+        font-size: 25px;
+        font-style: italic;}
+
+      .newsreader-2 {
+        font-size: 32px;
+        margin-top: 28px;}
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px; }
+
+      .row-0 {
+        margin-left: 0;
+        margin-right: 0; }
+        .row-0 > [class*='col'] {
+          padding-left: 0;
+          padding-right: 0; }
+
+      .row-4 {
+        margin-left: -4px;
+        margin-right: -4px; }
+        .row-4 > [class*='col'] {
+          padding-left: 4px;
+          padding-right: 4px; }
+
+      .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col-5 {
+        flex: 0 0 41.666667%;
+        border-right: 1px solid #334B81;
+        max-width: 41.666667%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col-content {
+        padding: 24px 30px;
+        flex-grow: 1; }
+
+      .col-content .list {
+        padding-left: 16px;
+        font-size: 17px; }
+
+      .col-content .list li {
+        margin-bottom: 2px; }
+
+      .col-content .list li::marker {
+        color: #CA9049; }
+
+      .col-content ul li::marker {
+        font-size: 13px; }
+
+      .title-box {
+        height: 195px;
+        margin-bottom: 48px; }
+
+      .h1, h1, .h2, h2, .h3, h3, .h4, h4, p {
+        margin-top: 0; }
+
+      .h1, h1 {
+        font-family: "Marcellus", sans-serif;
+        font-size: 94px;
+        font-weight: normal;
+        line-height: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #FFF;
+        margin-bottom: 16px; }
+
+      .h2, h2 {
+        font-size: 54px;
+        line-height: 1.2; }
+
+      .h3, h3 {
+        font-size: 18px;
+        color: #CA9049;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 16px; }
+
+      .h4, h4 {
+        font-size: 16px;
+        margin-bottom: 8px; }
+
+      p {
+        font-size: 21px;
+        line-height: 1.5;
+        margin-bottom: 16px; }
+
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="main">
+    <div class="row row-0 w-100"> 
+      <div class="col-auto">
+        <div class="img-box" style="background-image: url(img/cocktail-1.webp)"></div>
+      </div>
+      <div class="col d-flex flex-column">
+        <div class="content text-center flex-grow-1">
+          <div>
+            <img src="img/brand.webp" alt="" width="70" class="mb-32">
+          </div>
+          <h3>EXPLORE YOUR POUR</h3>
+          <h1>Cocktail Recipes</h1>
+          <div class="row row-4 justify-content-center align-items-center mt-auto">
+            <div class="col-auto">Rum</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Tequila</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Brandy</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Prosecco</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Vodka</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Calvados</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Gin</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Grappa</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Liqueur</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Vermouth</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Whiskey</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Mezkal</div>
+            <div class="col-auto point-brown">·</div>
+            <div class="col-auto">Wine</div>
+          </div>
+        </div>
+        <div class="section-bottom">
+          <img src="img/palm-bay-white.webp" alt="" width="155">
+        </div>
+      </div>
+    </div>   
+  </div>
+
+  <div class="main">
+    <div class="row row-0 w-100"> 
+      <div class="col-auto">
+        <div class="img-box" style="background-image: url(img/cocktail-2.webp)">
+          <div class="qr-box">
+            <img src="img/qr-code.webp" alt="" width="78">
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex flex-column">
+        <div class="content text-center">
+          <h3 class="h4">TEQUILA COCKTAIL</h3>
+          <div class="title-box">
+            <h1 class="h2">Drumshanbogh Gunpowder Gin & Tonic</h1>
+          </div>
+          <div class="newsreader">President Eisenhower's Oval Office Treat</div>
+        </div>
+        <div class="section-middle flex-grow-1">
+          <div class="row h-100">
+            <div class="col-5 d-flex">
+              <div class="col-content">
+                <h3 class="h4">Ingredients</h3>
+                <ul class="list">
+                  <li>1.5oz Bribón Blanco Tequila</li>
+                  <li>0.25oz Chase Elderflower Liqueur</li>
+                  <li>2.5oz orange juice</li>
+                  <li>0.25oz lime juice</li>
+                  <li>0.5oz grenadine</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col d-flex">
+              <div class="col-content">
+                <h3 class="h4">Directions</h3>
+                <ol class="list">
+                  <li>Combine Tequile, elderflower, and orange juice, and lime in a rocks or highball glass.</li>
+                  <li>Toss with shaker to combine flavors.</li>
+                  <li>In rocks glass top with Grenadine and allow to settle.</li>
+                  <li>Garnish with cherry or orange.</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-bottom">
+          <img src="img/palm-bay-white.webp" alt="" width="155">
+        </div>
+      </div>
+    </div>   
+  </div>
+
+  <div class="main">
+    <div class="row row-0 w-100"> 
+      <div class="col-auto">
+        <div class="img-box" style="background-image: url(img/cocktail-3.webp)"></div>
+      </div>
+      <div class="col d-flex flex-column">
+        <div class="section-top"></div>
+        <div class="content flex-grow-1">
+          <div class="mt-85">
+            <p>Through our thoughtfully curated collection of artisanal spirits, the stories of flavor and texture are told — whether they’re served neat, stirred into the classics, or shaken up in creative new concoctions.</p>
+            <p>Palm Bay spirits represent a dynamic tapestry of cocktail cultures from seven different countries, inviting you to imagine, create, and </p>
+            <div class="newsreader newsreader-2">Explore Your Pour</div>
+          </div>
+        </div>
+        <div class="section-bottom">
+          <img src="img/palm-bay-white.webp" alt="" width="155">
+        </div>
+      </div>
+    </div>   
+  </div>
+
+  <div class="main">
+    <div class="row row-0 w-100"> 
+      <div class="col d-flex flex-column">
+        <div class="section-top"></div>
+        <div class="content content-2 flex-grow-1 text-center">
+          <div class="my-auto">
+            <div>
+              <div>
+                <img src="img/brand.webp" alt="" width="85" class="mb-32">
+              </div>
+              <div>
+                <img src="img/palm-bay-white.webp" alt="" width="400">
+              </div>
+            </div>
+            <div class="mt-90">
+              <div class="text-uppercase mb-12">
+                <div>Henry Foreman <br> Salec Director NYC</div>
+              </div>
+              <div class="mb-12"><i>Direct (561) 893-9998 <br> henry.foreman@palmbay.com</i></div>
+              <div><i>48 Harbor Park Drive, Port Washington, <br> NY 11050-4653</i></div>
+            </div>
+          </div>
+        </div>
+        <div class="section-bottom-2">
+          <div class="row row-0 align-items-center">
+            <div class="col">
+              <div class="box box-left">AUTCPN215  © 2024 Palm Bay Internartional, Boca Paton, A.</div>
+            </div>
+            <div class="col-auto">
+              <div class="box box-right">PALMBAY.COM</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>   
+  </div>
+
+</body>
+</html>
