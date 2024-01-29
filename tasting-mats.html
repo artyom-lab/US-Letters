@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter landscape;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #fff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Marcellus&display=swap");
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        margin: 0; }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      .header, .footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding-left: 46px;
+        padding-right: 46px; }
+
+      .header {
+        top: 0;
+        text-align: center;
+        padding-top: 34px;
+        height: 82px; }
+
+      .footer {
+        bottom: 0;
+        color: #050F24;
+        font-size: 11px;
+        height: 72px; }
+
+      .header-space {
+        height: 82px; }
+
+      .footer-space {
+        height: 82px; }
+
+      .relative {
+        margin-right: 46px;
+        margin-left: 46px; }
+
+      table {
+        width: 100%;
+        height: 100vh; }
+
+      tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 8px; }
+
+      .brown {
+        color: #C5B696; }
+
+      .fz-13 {
+        font-size: 13px; }
+
+      .fw-bold {
+        font-weight: bold; }
+
+      .border-left {
+        border-left: 1px solid #BAAB8B; }
+
+      .border-right {
+        border-right: 1px solid #BAAB8B; }
+
+      .mr-12 {
+        margin-right: 12px; }
+
+      .mb-2 {
+        margin-bottom: 2px; }
+
+      .mb-24 {
+        margin-bottom: 24px; }
+
+      .align-items-center {
+        align-items: center; }
+
+      .text-center {
+        text-align: center; }
+
+      .text-right {
+        text-align: right; }
+
+      .main {
+        border: 1px solid #BAAB8B;
+        height: calc(100vh - 178px);
+        display: flex;
+        flex-direction: column;
+        padding: 0 15px; }
+
+      .box-circle {
+        border-radius: 200px;
+        border: 3px solid #C98E49;
+        width: 287px;
+        height: 287px;
+        margin: auto;
+        padding: 30px 40px; }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px; }
+
+      .row-9 {
+        margin-left: -9px;
+        margin-right: -9px; }
+        .row-9 > [class*='col'] {
+          padding-left: 9px;
+          padding-right: 9px; }
+
+      .row-tasting {
+        justify-content: center;
+        height: 50%; }
+
+      .row-tasting:first-child {
+        border-bottom: 1px solid #BAAB8B; }
+
+      .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+        padding: 15px;
+        display: flex; }
+
+      .h1, h1, .h2, h2 {
+        margin-top: 0; }
+
+      .h1, h1 {
+        font-family: "Marcellus", sans-serif;
+        font-weight: normal;
+        color: #030836;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;  
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        font-size: 14px;
+        margin-bottom: 12px; }
+
+      .h2, h2 {
+        color: #C98E49;
+        font-size: 9px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin-bottom: 6px; }
+
+      .qr-box {
+        display: inline-block;
+        font-size: 0;
+        border: 1px solid #BAAB8B; }
+
+      .number {
+        color: #C98E49;
+        font-family: "Marcellus", sans-serif;
+        font-weight: bold;
+        width: 42px;
+        font-size: 75px;
+        line-height: 0.8;
+        text-align: right; }
+
+      .year {
+        color: #C98E49;
+        font-size: 11px; }
+
+      .main-blue .box-circle {
+        border-color: #265185; }
+
+      .main-blue .number, .main-blue h2, .main-blue .year {
+        color: #265185; }
+
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="relative">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <div class="header-space">&nbsp;</div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="row row-tasting">
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">1</div>
+                      </div>
+                      <div class="col">
+                        <h2>MAISON TRIMBACH</h2>
+                        <h1>“Cuvée Des Seigneurs De Ribeaupierre” Gewurztraminer</h1>
+                        <div class="year">2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left border-right">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">2</div>
+                      </div>
+                      <div class="col">
+                        <h2>ACCADEMIA</h2>
+                        <h1>Accademia Prosecco</h1>
+                        <div class="year">2023</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-tasting">
+                <div class="col col-4">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">3</div>
+                      </div>
+                      <div class="col">
+                        <h2>CAVIT</h2>
+                        <h1>Pinot Grigio</h1>
+                        <div class="year">2024</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">4</div>
+                      </div>
+                      <div class="col">
+                        <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+                        <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+                        <div class="year">2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">5</div>
+                      </div>
+                      <div class="col">
+                        <h2>JACOB'S PARDON</h2>
+                        <h1>15-Year-Old, Single Barrel American Whiskey, Barrel #23</h1>
+                        <div class="year">NV/MV</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main main-blue">
+              <div class="row row-tasting">
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">1</div>
+                      </div>
+                      <div class="col">
+                        <h2>MAISON TRIMBACH</h2>
+                        <h1>“Cuvée Des Seigneurs De Ribeaupierre” Gewurztraminer</h1>
+                        <div class="year">2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left border-right">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">2</div>
+                      </div>
+                      <div class="col">
+                        <h2>ACCADEMIA</h2>
+                        <h1>Accademia Prosecco</h1>
+                        <div class="year">2023</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row row-tasting">
+                <div class="col col-4">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">3</div>
+                      </div>
+                      <div class="col">
+                        <h2>CAVIT</h2>
+                        <h1>Pinot Grigio</h1>
+                        <div class="year">2024</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">4</div>
+                      </div>
+                      <div class="col">
+                        <h2>DRUMSHANBO GUNPOWDER IRISH GIN</h2>
+                        <h1>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h1>
+                        <div class="year">2019</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col-4 border-left">
+                  <div class="box-circle">
+                    <div class="text-center mb-24">
+                      <div class="qr-box">
+                        <img src="img/qr-brand.webp" alt="" width="75">
+                      </div>
+                    </div>
+                    <div class="row row-9">
+                      <div class="col-auto">
+                        <div class="number">5</div>
+                      </div>
+                      <div class="col">
+                        <h2>JACOB'S PARDON</h2>
+                        <h1>15-Year-Old, Single Barrel American Whiskey, Barrel #23</h1>
+                        <div class="year">NV/MV</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <div class="footer-space">&nbsp;</div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="header">
+      <img src="img/palm-bay.webp" alt="" width="180">
+    </div>
+    <div class="footer">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="fw-bold mb-2">Tiffany Robinson</div>
+          <div class="mb-2">
+            <span class="mr-12">tiffany.robinson@palmbay.com</span><span>Tel. (561) 893-9998</span>
+          </div>
+          <div class="brown">AUTCPN215 © 2024 Palm Bay International, Boca Patron, A.</div>
+        </div>
+        <div class="col text-center fz-13 fw-bold">PALMBAY.COM</div>
+        <div class="col text-right">
+          <img src="img/walmart.webp" width="140" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
