@@ -1,0 +1,1424 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta name="robots" content="noindex">
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <style>
+        @page {
+            size: letter landscape;
+            margin: 0cm !important;
+            padding: 0cm !important;
+        }
+
+        @media print {
+            * {
+                box-sizing: border-box;
+            }
+
+            body, html {
+                background: #fff !important;
+                -webkit-print-color-adjust: exact;
+            }
+
+            table {
+                border-collapse: collapse;
+            }
+
+            .page-break-before {
+                page-break-before: always; /* Add a page break before the element */
+            }
+
+            .page-break-after {
+                page-break-after: always; /* Add a page break after the element */
+            }
+
+            .avoid-page-break {
+                page-break-inside: avoid; /* Avoid page breaks inside the element */
+            }
+        }
+    </style>
+
+    <style>
+
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Marcellus&display=swap");
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        margin: 0; }
+
+      * {
+          box-sizing: border-box;
+      }
+
+      .header, .footer{
+        position: fixed;
+        left: 0;
+        right: 0;
+        padding-left: 46px;
+        padding-right: 46px; }
+
+      .header {
+        top: 0;
+        text-align: center;
+        padding-top: 34px;
+        height: 90px; }
+
+      .footer {
+        bottom: 0;
+        color: #050F24;
+        font-size: 11px;
+        height: 72px; }
+
+      .header-space {
+        height: 90px; }
+
+      .footer-space {
+        height: 72px; }
+
+      .relative {
+        margin-right: 46px;
+        margin-left: 46px; }
+
+      table {
+        width: 100%;
+        height: 100vh; }
+
+      tbody tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px; }
+
+      .brown {
+        color: #C5B696; }
+
+      .fz-0 {
+        font-size: 0; }
+
+      .fz-13 {
+        font-size: 13px; }
+
+      .fz-25 {
+        font-size: 25px; }
+
+      .fw-bold {
+        font-weight: bold; }
+
+      .text-center {
+        text-align: center; }
+
+      .text-right {
+        text-align: right; }
+
+      .mr-4 {
+        margin-right: 4px; }
+
+      .mr-12 {
+        margin-right: 12px; }
+
+      .mb-2 {
+        margin-bottom: 2px; }
+
+      .mt-auto {
+        margin-top: auto; }
+
+      .mt-16 {
+        margin-top: 16px; }
+
+      .mb-6 {
+        margin-bottom: 6px; }
+
+      .mb-10 {
+        margin-bottom: 10px; }
+
+      .mb-32 {
+        margin-bottom: 32px; }
+
+      .mb-38 {
+        margin-bottom: 38px; }
+
+      .align-items-center {
+        align-items: center; }
+
+      .align-items-end {
+        align-items: end; }
+
+      .flex-grow-1 {
+        flex-grow: 1; }
+
+      .text-uppercase {
+        text-transform: uppercase; }
+
+      .main {
+        border: 1px solid #B4AD93;
+        height: calc(100vh - 180px);
+        display: flex;
+        flex-direction: column; }
+
+      .content {
+        padding: 16px 18px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column; }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -15px;
+        margin-left: -15px; }
+
+      .row-9 {
+        margin-left: -9px;
+        margin-right: -9px; }
+        .row-9 > [class*='col'] {
+          padding-left: 9px;
+          padding-right: 9px; }
+
+      .col-auto {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px; }
+
+      .h1, h1, .h2, h2, .h3, h3, .h4, h4, .h5, h5, p {
+        margin-top: 0; }
+
+      .h1, h1, .h2, h2 {
+        font-family: "Marcellus", sans-serif;
+        font-weight: normal;
+        line-height: 1.2;
+        color: #030836;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;  
+        overflow: hidden; }
+
+      .h1, h1 {
+        font-size: 40px;
+        margin-bottom: 4px;
+        -webkit-line-clamp: 1; }
+
+      .h2, h2 {
+        font-size: 22px;
+        margin-bottom: 0;
+        padding-bottom: 8px;
+        line-height: 1.15;
+        -webkit-line-clamp: 4; }
+
+      .h3, h3, .h4, h4, .h5, h5 {
+        color: #CA9049;
+        font-weight: bold; }
+
+      .h3, h3 {
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px; }
+
+      .h4, h4 {
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-bottom: 8px; }
+
+      .h5, h5 {
+        font-size: 10px;
+        margin-bottom: 8px; }
+
+      p {
+        font-size: 9px;
+        margin-bottom: 4px;
+        line-height: 1.5;
+        font-style: italic;
+        font-weight: bold;
+        color: #030836; }
+
+      .qr-comment {
+        color: #CA9049;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1;
+        margin-right: 6px;
+        text-align: right;
+        vertical-align: top; }
+
+      .card-gray, .card-blue {
+        height: 100%;
+        display: flex;
+        flex-direction: column; }
+
+      .card-top {
+        height: 224px;
+        background: #E5E4D5;
+        position: relative;
+        text-align: center;
+        padding: 18px 60px 8px; }
+
+      .points-box {
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        left: 12px; }
+
+      .points {
+        font-size: 8px;
+        color: #C5B696;
+        margin-bottom: 16px; }
+       
+      .points .number {
+        font-family: "Marcellus", sans-serif;
+        font-size: 30px;
+        color: #CA9049;
+        line-height: 0.9; }
+
+      .img-gold {
+        width: 40px; }
+
+      .bottle {
+        height: 190px;
+        object-fit: contain;  
+        margin-top: 10px; }
+
+      .bottle-big {
+        margin-top: -4px; }
+
+      .bottle-big-2 {
+        height: 220px;
+        margin-top: -25px; }
+
+      .card-bottom {
+        padding-top: 16px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; }
+
+      .wrapper {
+        display: flex;}
+
+      .wrapper p {
+        margin-bottom: 0;}
+
+      .wrapper .h5 {
+        font-style: normal;
+        margin-bottom: 0;}
+
+      .float {
+        float: right;
+        height: 100%;
+        margin-left: 7px;
+        display: flex;
+        align-items: flex-end;
+        shape-outside: inset(calc(100% - 75px) 0 0);}
+
+      .price {
+        color: #CA9049;
+        font-size: 54px;
+        line-height: 1; }
+
+      .price span {
+        font-size: 34px; }
+
+      .price-cancelled {
+        color: #DDCBBE;
+        font-size: 32px;
+        text-decoration: line-through;
+        text-decoration-color: #CA9049; }
+
+      .price-small {
+        color: #030836;
+        font-size: 13px;
+        margin-top: 8px; }
+
+      .card-blue .card-top {
+        background: #030836; }
+
+      .card-blue .points-box .points, .card-blue .points-box .number {
+        color: #FFF;}
+
+      .card-blue h3, .card-blue h4, .card-blue h5, .card-blue .price, .card-blue .wrapper .h5 {
+        color: #265185; }
+
+      .card-blue .price-cancelled {
+        text-decoration-color: #265185; }
+
+      .col-3 .card-top {
+        height: 214px;
+        padding: 18px 90px 8px; }
+
+      .col-3 .points-box {
+        top: 18px;
+        left: 20px; }
+
+      .col-3 .points {
+        font-size: 10px; }
+
+      .col-3 .number {
+        font-size: 40px; }
+
+      .col-3 .img-gold {
+        width: 50px; }
+
+      .col-3 .bottle {
+        height: 230px;
+        margin-top: -44px; }
+
+      .col-3 .card-bottom {
+        padding-top: 12px; }
+
+      .col-3 h2 {
+        font-size: 25px;
+        -webkit-line-clamp: 3; }
+
+      .col-3 h3, .col-3 h4, .col-3 h5, .col-3 .h5, .col-3 p {
+        font-size: 11px; }
+
+      .col-2 .card-top {
+        height: 224px; }
+
+      .col-2 .points {
+        font-size: 11px; }
+
+      .col-2 .number {
+        font-size: 46px; }
+
+      .col-2 .img-gold {
+        width: 60px; }
+
+      .col-2 .bottle {
+        height: 246px;
+        margin-top: -50px; }
+
+      .col-2 .card-bottom {
+        padding-top: 16px; }
+
+      .col-2 h2 {
+        font-size: 31px;
+        -webkit-line-clamp: 2; }
+
+      .col-2 h3, .col-2 h4, .col-2 h5, .col-2 .h5, .col-2 p {
+        font-size: 14px; }
+
+      .col-2 h5, .col-2 .h5, .col-2 p {
+        font-size: 13px; }
+
+      .col-2 .price {
+        font-size: 64px; }
+
+      .col-2 .price-cancelled {
+        font-size: 40px; }
+
+      .col-2 .price-small {
+        font-size: 16px; }
+
+    </style>
+    
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+  <div class="relative">
+    <table>
+      <thead>
+        <tr>
+          <td>
+            <div class="header-space">&nbsp;</div>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-6">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying finish. Here is some additional text to see what happens we include a margin around the QR code. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            A ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and  frankly, a little liberating. It would be a crime not to enjoy it. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay-2.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/trimbach-2.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>MAISON TRIMBACH</h3>
+                        <h2>“Cuvée Des Seigneurs  De Ribeaupierre” Gewurztraminer</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            This Alsace white wine pairs perfectly with spicy dishes from Morocco, India, China, Thailand or Mexico. Dishes such as spicy couscous, dal curry, peking duck, orange duck, fajitas, salmon ceviche, foie gras, blue-veined cheeses or fresh fruit desserts are all refined pairings. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-6">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$32.<span>83</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$10.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75" class="mt-16">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$108.<span>16</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$112.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75" class="mt-16">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay-2.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$183.<span>75</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$10.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75" class="mt-16">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/trimbach-2.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>MAISON TRIMBACH</h3>
+                        <h2>“Cuvée Des Seigneurs  De Ribeaupierre” Gewurztraminer</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$46.<span>50</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$52.30</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75" class="mt-16">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="row mb-10">
+                  <div class="col">
+                    <h1>Party beverages</h1>
+                    <h5 class="text-uppercase">Christmas 2023</h5>
+                  </div>
+                  <div class="col-auto">
+                    <div class="qr-comment">
+                      <div>Ut velibus</div>
+                      <div>doluptas</div>
+                    </div>
+                    <img src="img/qr-code.webp" alt="" width="78">
+                  </div>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <p>A ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and  frankly, a little liberating. It would be a crime not to enjoy it.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <p>Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <p>A ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and  frankly, a little liberating. It would be a crime not to enjoy it.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-38">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying finish. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            A ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and  frankly, a little liberating. It would be a crime not to enjoy it. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-38">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$32.<span>83</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$10.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$108.<span>16</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$112.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price">$183.<span>75</span></div>
+                          <div class="row row-9">
+                            <div class="col">
+                              <div class="price-cancelled">$10.03</div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="row mb-10">
+                  <div class="col">
+                    <h1>Party beverages</h1>
+                    <h5 class="text-uppercase">Christmas 2023</h5>
+                  </div>
+                  <div class="col-auto">
+                    <div class="qr-comment">
+                      <div>Ut velibus</div>
+                      <div>doluptas</div>
+                    </div>
+                    <img src="img/qr-code.webp" alt="" width="78">
+                  </div>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">93</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/pardon.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>JACOB’S PARDON</h3>
+                        <h2>Small Batch Recipe #2</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">USA</span>
+                          <span>KENTUCKY</span>
+                        </h4>
+                        <p>A ﬁne American whiskey that pays homage to their rebellious roots. Its complex, smooth, timeless, and  frankly, a little liberating. It would be a crime not to enjoy it.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <p>Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-32">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3 col-2">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying finish. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3 col-2">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="wrapper flex-grow-1">
+                          <p>
+                            <span class="float"><img src="img/qr-brand.webp" alt="" width="75"></span>
+                            Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish. <br> <span class="h5">Wine Enthusiast  November 2023</span>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="mb-32">
+                  <h1 class="fz-25">Exclusive Walmart 2024 Q2 Catalogue</h1>
+                  <h5 class="fz-13 text-uppercase">SPECIAL EDITION</h5>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3 col-2">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle bottle-big" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price-cancelled">$10.03</div>
+                          <div class="row row-9 align-items-end">
+                            <div class="col">
+                              <div class="price">$108.<span>16</span></div>
+                              <div class="price-small">$21.05 / 10cl</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3 col-2">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle bottle-big-2" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <div class="mt-auto">
+                          <div class="price-cancelled">$10.03</div>
+                          <div class="row row-9 align-items-end">
+                            <div class="col">
+                              <div class="price">$183.<span>75</span></div>
+                              <div class="price-small">€2,720.00 / 100 ml +€4.90 shipping</div>
+                            </div>
+                            <div class="col-auto fz-0">
+                              <img src="img/qr-brand.webp" alt="" width="75">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="main">
+              <div class="content">
+                <div class="row mb-10">
+                  <div class="col">
+                    <h1>Party beverages</h1>
+                    <h5 class="text-uppercase">Christmas 2023</h5>
+                  </div>
+                  <div class="col-auto">
+                    <div class="qr-comment">
+                      <div>Ut velibus</div>
+                      <div>doluptas</div>
+                    </div>
+                    <img src="img/qr-code.webp" alt="" width="78">
+                  </div>
+                </div>
+                <div class="row row-9 flex-grow-1">
+                  <div class="col col-3 col-2">
+                    <div class="card-blue">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">94</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/shanbo.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>DRUMSHANBO GUNPOWDER IRISH GIN</h3>
+                        <h2>Drumshanbo Gunpowder Irish Gin California Orange Citrus</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">IRELAND</span>
+                          <span>LEITRIM</span>
+                        </h4>
+                        <p>So named because “gunpowder” green tea is one of the key botanicals, this gin has an assertive citrusy aroma, with a hint of tropical fruit. The palate is minty and light, showing plenty of juniper. The tingly, drying ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col col-3 col-2">
+                    <div class="card-gray">
+                      <div class="card-top">
+                        <div class="points-box">
+                          <div class="points">
+                            <div class="number">82</div>
+                            <i>Points 2023</i>
+                          </div>
+                          <img src="img/gold.webp" class="img-gold" alt="">
+                        </div>
+                        <img src="img/chardonnay.webp" class="bottle" alt="">
+                      </div>
+                      <div class="card-bottom">
+                        <h3>Cavit</h3>
+                        <h2>Oak Zero <br> Chardonnay</h2>
+                        <h4>
+                          <span class="mr-4">NV/MV</span>
+                          <span class="mr-4">Italy</span>
+                          <span>Trentino</span>
+                        </h4>
+                        <p>Fresh aromas of green apple and honeydew melon waft from the glass of this easy white wine. Fruity and forward, the simple palate delivers bright orchard fruit ﬂavors with a soft ﬁnish.</p>
+                        <h5>Wine Enthusiast  November 2023</h5>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>
+            <div class="footer-space">&nbsp;</div>
+          </td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="header">
+      <img src="img/palm-bay.webp" alt="" width="180">
+    </div>
+    <div class="footer">
+      <div class="row align-items-center">
+        <div class="col">
+          <div class="fw-bold mb-2">Tiffany Robinson</div>
+          <div class="mb-2">
+            <span class="mr-12">tiffany.robinson@palmbay.com</span><span>Tel. (561) 893-9998</span>
+          </div>
+          <div class="brown">AUTCPN215 © 2024 Palm Bay International, Boca Patron, A.</div>
+        </div>
+        <div class="col text-center fz-13 fw-bold">PALMBAY.COM</div>
+        <div class="col text-right">
+          <img src="img/walmart.webp" width="140" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
