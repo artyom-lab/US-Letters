@@ -52,7 +52,7 @@
         font-family: "DM Sans", sans-serif;
         font-size: 12px;
         display: flex;
-        margin: 12px;
+        margin: 3.15mm;
         height: calc(100vh - 24px);
         position: relative; }
 
@@ -60,8 +60,11 @@
         margin-left: auto;
         margin-right: auto; }
 
-      .mt-10 {
-        margin-top: 10px; }
+      .mt-6 {
+        margin-top: 6px; }
+
+      .mt-16 {
+        margin-top: 16px; }
 
       .d-flex {
         display: flex; }
@@ -71,23 +74,23 @@
 
       .card-talker {
         width: 360px;
-        height: 264px;
+        height: 263px;
         display: flex;
         flex-direction: column;
         position: relative; }
 
       .bg {
         background-color: #E5E4D5;
-        height: 264px;
+        height: 263px;
         display: flex;
         flex-direction: column;
         overflow: hidden;
         width: 112px;
-        padding: 36px 13px 26px 24px;
+        padding: 30px 13px 24px 25px;
         text-align: center; }
 
       .bottle {
-        height: 170px;
+        height: 174px;
         object-fit: contain; }
 
       .brand {
@@ -95,7 +98,7 @@
         font-size: 0; }
 
       .content {
-        padding: 22px 26px 18px 30px;
+        padding: 22px 28px 18px 28px;
         display: flex;
         overflow: hidden;
         flex-direction: column;
@@ -104,8 +107,8 @@
       .row {
         display: flex;
         flex-wrap: wrap;
-        margin-right: -20px;
-        margin-left: -20px; }
+        margin-right: -20.5px;
+        margin-left: -20.5px; }
 
       .row-0 {
         margin-left: 0;
@@ -126,8 +129,8 @@
         width: auto;
         max-width: 100%;
         position: relative;
-        padding-right: 20px;
-        padding-left: 20px; }
+        padding-right: 20.5px;
+        padding-left: 20.5px; }
 
       .col {
         flex-basis: 0;
@@ -135,8 +138,8 @@
         max-width: 100%;
         width: 100%;
         position: relative;
-        padding-right: 20px;
-        padding-left: 20px; }
+        padding-right: 20.5px;
+        padding-left: 20.5px; }
 
       .h1, h1, .h2, h2, .h3, h3, p {
         margin-top: 0; }
@@ -191,8 +194,8 @@
 
       .copyright {
         color: #BAAC8C;
-        font-size: 5px;
-        margin-top: 6px;
+        font-size: 4px;
+        margin-top: 8px;
         text-align: right;}
 
       .card-blue h2, .card-blue .h2, .card-blue h3 {
@@ -207,50 +210,58 @@
       .card-gold h2, .card-gold .h2, .card-gold h3 {
           color: #CA9049; }
 
-      .mark-t1, .mark-t2, .mark-b1, .mark-b2, .mark-l1, .mark-l2, .mark-r1, .mark-r2 {
+      .mark-t1, .mark-t2, .mark-b1, .mark-b2, .mark-l1, .mark-l2, .mark-r1, .mark-r2, .mark-m1, .mark-m2 {
         position: absolute;
         background: #000;
         z-index: 2;}
 
       .card-talker .mark-t1, .card-talker .mark-t2, .card-talker .mark-b1, .card-talker .mark-b2 {
         width: 1px;
-        height: 12px; }
+        height: 3.15mm; }
 
-      .card-talker .mark-l1, .card-talker .mark-l2, .card-talker .mark-r1, .card-talker .mark-r2 {
-        width: 30px;
+      .card-talker .mark-l1, .card-talker .mark-l2, .card-talker .mark-r1, .card-talker .mark-r2, .card-talker .mark-m1, .card-talker .mark-m2 {
+        width: 32px;
         height: 1px; }
 
       .card-talker .mark-t1 {
-        top: -12px;
-        left: 0.7rem; }
+        top: -3.15mm;
+        left: 12px; }
 
       .card-talker .mark-t2 {
-        top: -12px;
-        right: 0.7rem; }
+        top: -3.15mm;
+        right: 12px; }
 
       .card-talker .mark-b1 {
-        bottom: -12px;
-        left: 0.7rem; }
+        bottom: -3.15mm;
+        left: 12px; }
 
       .card-talker .mark-b2 {
-        bottom: -12px;
-        right: 0.7rem; }
+        bottom: -3.15mm;
+        right: 12px; }
 
       .card-talker .mark-l1 {
-        top: 0.7rem;
-        left: -30px; }
+        top: 3mm;
+        left: -32px; }
 
       .card-talker .mark-l2 {
-        bottom: 0.7rem;
-        left: -30px; }
+        bottom: 3mm;
+        left: -32px; }
 
       .card-talker .mark-r1 {
-        top: 0.7rem;
-        right: -30px; }
+        top: 3mm;
+        right: -32px; }
 
       .card-talker .mark-r2 {
-        bottom: 0.7rem;
-        right: -30px; }
+        bottom: 3mm;
+        right: -32px; }
+
+      .card-talker .mark-m1 {
+        top: 3mm;
+        left: -36px; }
+
+      .card-talker .mark-m2 {
+        bottom: 3mm;
+        left: -36px; }
 
     </style>
     
@@ -357,7 +368,7 @@
                     <h3>Prosecco DOC  Treviso  Italy  2023</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/cavit.webp" alt="" width="45" class="mt-10">
+                    <img src="img/cavit.webp" alt="" width="45" class="mt-16">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -474,7 +485,7 @@
                     <h3>Kentuky  USA  NV/MV</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/jacobs.webp" alt="" width="45" class="mt-10">
+                    <img src="img/jacobs.webp" alt="" width="48" class="mt-6">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -490,8 +501,8 @@
           </div> 
           <div class="mark-t1"></div>
           <div class="mark-t2"></div>
-          <div class="mark-l1"></div>
-          <div class="mark-l2"></div>
+          <div class="mark-m1"></div>
+          <div class="mark-m2"></div>
           <div class="mark-r1"></div>
           <div class="mark-r2"></div>
         </div>
@@ -595,7 +606,7 @@
                     <h3>Prosecco DOC  Treviso  Italy  2023</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/cavit.webp" alt="" width="45" class="mt-10">
+                    <img src="img/cavit.webp" alt="" width="45" class="mt-16">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -710,7 +721,7 @@
                     <h3>Kentuky  USA  NV/MV</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/jacobs.webp" alt="" width="45" class="mt-10">
+                    <img src="img/jacobs.webp" alt="" width="48" class="mt-6">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -723,8 +734,8 @@
               </div>
             </div>
           </div> 
-          <div class="mark-l1"></div>
-          <div class="mark-l2"></div>
+          <div class="mark-m1"></div>
+          <div class="mark-m2"></div>
           <div class="mark-r1"></div>
           <div class="mark-r2"></div>
         </div>
@@ -828,7 +839,7 @@
                     <h3>Prosecco DOC  Treviso  Italy  2023</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/cavit.webp" alt="" width="45" class="mt-10">
+                    <img src="img/cavit.webp" alt="" width="45" class="mt-16">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -944,7 +955,7 @@
                     <h3>Contrôlée Alsace France 2019</h3>
                   </div>
                   <div class="col-auto">
-                    <img src="img/trimbach-brand.webp" alt="" width="45" class="mt-10">
+                    <img src="img/trimbach-brand.webp" alt="" width="45" class="mt-16">
                   </div>
                 </div>
                 <div class="wrapper">
@@ -959,8 +970,8 @@
           </div> 
           <div class="mark-b1"></div>
           <div class="mark-b2"></div>
-          <div class="mark-l1"></div>
-          <div class="mark-l2"></div>
+          <div class="mark-m1"></div>
+          <div class="mark-m2"></div>
           <div class="mark-r1"></div>
           <div class="mark-r2"></div>
         </div>
